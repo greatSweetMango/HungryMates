@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
 	return {
 		background_color: "#ffffff",
 		// categories?: string[];
-		description: "Supreme NextJS Template for quick development by NizarSyahmi37",
+		description: "HungryMates",
 		// dir?: 'ltr' | 'rtl' | 'auto';
 		display: "standalone",
 		// display_override?: ('fullscreen' | 'standalone' | 'minimal-ui' | 'browser' | 'window-controls-overlay')[];
@@ -33,7 +33,7 @@ export default function manifest(): MetadataRoute.Manifest {
 		// 	platform?: 'windows' | 'macos' | 'linux';
 		// 	url?: string;
 		// };
-		name: "Supreme NextJS Template by NizarSyahmi37",
+		name: "HungryMates",
 		// orientation?: 'any' | 'natural' | 'landscape' | 'portrait' | 'portrait-primary' | 'portrait-secondary' | 'landscape-primary' | 'landscape-secondary';
 		// prefer_related_applications?: boolean;
 		// protocol_handlers?: {
@@ -75,7 +75,7 @@ export default function manifest(): MetadataRoute.Manifest {
 		// 		name?: string;
 		// 	}[];
 		// };
-		short_name: "Supreme NextJS Template",
+		short_name: "HungryMates",
 		// shortcuts?: {
 		// 	name: string;
 		// 	short_name?: string;

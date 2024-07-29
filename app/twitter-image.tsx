@@ -2,7 +2,7 @@ import { ImageResponse } from "next/og"
 
 export const runtime = "edge"
 
-export const alt = "Supreme NextJS Template by NizarSyahmi37"
+export const alt = "HungryMates"
 export const size = { width: 1200, height: 675 }
 export const contentType = "image/png"
 

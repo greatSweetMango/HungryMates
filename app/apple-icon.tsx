@@ -20,7 +20,7 @@ export default function Icon() {
 					color: "white",
 				}}
 			>
-				A
+				H
 			</div>
 		),
 		{
