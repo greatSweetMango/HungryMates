@@ -1,7 +1,7 @@
 ---
-name: "\bTask 템플릿"
-about: "\b새로운 \bTask 등록"
-title: "[feat] 작업내용"
+name: "\bTask Template"
+about: "\bRegister a new Task"
+title: "[feat] Task Description"
 labels: ''
 assignees: ''
 

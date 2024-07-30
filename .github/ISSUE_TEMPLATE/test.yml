@@ -1,5 +1,5 @@
 name: "🧪 Test"
-description: "Test 작업 사항을 입력해주세요."
+description: "Please enter the test task."
 title: "🧪 [Test] "
 labels: ["test"]
 body:
@@ -7,17 +7,17 @@ body:
     id: description
     attributes:
       label: Description
-      description: 이슈에 대한 설명을 입력해주세요.
+      description: Please provide a description for the issue.
     validations:
       required: true
   - type: textarea
     id: todo
     attributes:
       label: Todo
-      description: Todo list 를 추가해주세요.
+      description: Please add a Todo list.
       value: "- [ ] todo1"
   - type: textarea
     id: etc
     attributes:
       label: ETC
-      description: 기타 이슈사항을 입력해주세요.
+      description: Please enter any other issue details.
