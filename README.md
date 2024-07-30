@@ -3,7 +3,9 @@ Make something 42 repository
 
 ## Create Environment Variables
 
-- SITE_URL="https://domain.com"
+- SITE_URL="https://hungry-mates.vercel.app"
+- EDGE_STORE_ACCESS_KEY=access_key
+- EDGE_STORE_SECRET_KEY=secret_key
 
 ## Update Information
 
