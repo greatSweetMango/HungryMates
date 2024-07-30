@@ -67,7 +67,7 @@ export const Sidebar = ({
 	open?: boolean
 	setOpen?: Dispatch<SetStateAction<boolean>>
 	animate?: boolean
-	logo: any
+	logo?: any
 }) => {
 	return (
 		<SidebarProvider open={open} setOpen={setOpen} animate={animate} logo={logo}>
