@@ -1,0 +1,23 @@
+name: "🔨 Refactoring"
+description: "Please enter the details of the refactoring task."
+title: "🔨 [Refactoring] "
+labels: ["refactoring", "enhancement"]
+body:
+  - type: textarea
+    id: description
+    attributes:
+      label: Description
+      description: Please provide a description for the issue.
+    validations:
+      required: true
+  - type: textarea
+    id: todo
+    attributes:
+      label: Todo
+      description: Please add a todo list.
+      value: "- [ ] todo1"
+  - type: textarea
+    id: etc
+    attributes:
+      label: ETC
+      description: Please enter any other issue details.
