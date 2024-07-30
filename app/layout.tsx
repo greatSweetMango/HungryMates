@@ -12,14 +12,14 @@ import "./globals.css"
 export const revalidate = 60
 
 export const metadata: Metadata = {
-	metadataBase: new URL("https://supremenextjstemplate.nizarsyahmi37.com"),
+	metadataBase: new URL("https://hungry-mates.vercel.app"),
 	title: {
-		template: "%s | Supreme NextJS Template by NizarSyahmi37",
-		default: "Supreme NextJS Template by NizarSyahmi37",
-		absolute: "Supreme NextJS Template by NizarSyahmi37"
+		template: "%s | HungryMates",
+		default: "HungryMates",
+		absolute: "HungryMates"
 	},
-	description: "Supreme NextJS Template for quick development by NizarSyahmi37",
-	applicationName: "Supreme NextJS Template by NizarSyahmi37",
+	description: "HungryMates",
+	applicationName: "HungryMates",
 	authors: [
 		{
 			url: new URL("https://nizarsyahmi37.com"),
@@ -31,7 +31,8 @@ export const metadata: Metadata = {
 		"Template",
 		"Next.js Template",
 		"Supreme Template",
-		"Supreme Next.js Template"
+		"Supreme Next.js Template",
+		"HungryMates"
 	],
 	// referrer?: null | ReferrerEnum;
 	// themeColor: [
@@ -58,20 +59,20 @@ export const metadata: Metadata = {
 		},
 	},
     // icons?: null | IconURL | Array<Icon> | Icons;
-    manifest: new URL("https://supremenextjstemplate.nizarsyahmi37.com/manifest.json"),
+    manifest: new URL("https://hungry-mates.vercel.app/manifest.json"),
 	openGraph: {
-		title: "Supreme NextJS Template by NizarSyahmi37",
-		description: "Supreme NextJS Template for quick development by NizarSyahmi37",
+		title: "HungryMates",
+		description: "HungryMates",
 		emails: [
 			"admin@nizarsyahmi37.com",
 			"support@nizarsyahmi37.com"
 		],
-		siteName: "Supreme NextJS Template by NizarSyahmi37",
+		siteName: "HungryMates",
 		locale: "en",
 		alternateLocale: [
 
 		],
-		url: new URL("https://supremenextjstemplate.nizarsyahmi37.com"),
+		url: new URL("https://hungry-mates.vercel.app"),
 		type: "website",
 	},
     twitter: {
@@ -80,9 +81,9 @@ export const metadata: Metadata = {
 		creator: "@nizarsyahmi37",
 		creatorId: "870860500707430400",
 		title: {
-			template: "%s | Supreme NextJS Template by NizarSyahmi37",
-			default: "Supreme NextJS Template by NizarSyahmi37",
-			absolute: "Supreme NextJS Template by NizarSyahmi37"
+			template: "%s | HungryMates",
+			default: "HungryMates",
+			absolute: "HungryMates"
 		}
 	},
     // verification?: Verification;
