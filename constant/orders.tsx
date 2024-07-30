@@ -1,0 +1,121 @@
+import { people } from "./participants"
+
+export const cards = [
+	{
+        id: 1,
+		description: "Lana Del Rey",
+		title: "Chinese Food",
+		src: "https://images.unsplash.com/photo-1651399436026-3ca4088b3d6e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2hpbmVzZSUyMGZvb2R8ZW58MHwwfDB8fHww",
+		ctaText: "Join",
+		ctaLink: "#",
+        time: "August 21, 2024",
+        people,
+        location: "The Demon Celebrity, Basement, South China Building, 1 Wyndham Street, Central, Hong Kong",
+        information: `Enjoy the crossover between two stars of the gastronomy world, Chef Alvin Leung (a.k.a. Demon Chef) and Master Fu of the now-defunct Celebrity Cuisine was eagerly anticipated by all foodies. The two chefs put a new spin on the familiar Cantonese flavours, with collaborative efforts such as fried pork intestine stuffed with minced cuttlefish and black truffle. Chicken wing stuffed with bird's nest, one of Fu's specialities, can also be enjoyed here.`,
+		content: ""
+	},
+	{
+        id: 2,
+		description: "Lana Del Rey",
+		title: "Chinese Food",
+		src: "https://images.unsplash.com/photo-1651399436026-3ca4088b3d6e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2hpbmVzZSUyMGZvb2R8ZW58MHwwfDB8fHww",
+		ctaText: "Join",
+		ctaLink: "#",
+        time: "August 21, 2024",
+        people,
+        location: "The Demon Celebrity, Basement, South China Building, 1 Wyndham Street, Central, Hong Kong",
+        information: `Enjoy the crossover between two stars of the gastronomy world, Chef Alvin Leung (a.k.a. Demon Chef) and Master Fu of the now-defunct Celebrity Cuisine was eagerly anticipated by all foodies. The two chefs put a new spin on the familiar Cantonese flavours, with collaborative efforts such as fried pork intestine stuffed with minced cuttlefish and black truffle. Chicken wing stuffed with bird's nest, one of Fu's specialities, can also be enjoyed here.`,
+		content: ""
+	},
+	{
+        id: 3,
+		description: "Lana Del Rey",
+		title: "Chinese Food",
+		src: "https://images.unsplash.com/photo-1651399436026-3ca4088b3d6e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2hpbmVzZSUyMGZvb2R8ZW58MHwwfDB8fHww",
+		ctaText: "Join",
+		ctaLink: "#",
+        time: "August 21, 2024",
+        people,
+        location: "The Demon Celebrity, Basement, South China Building, 1 Wyndham Street, Central, Hong Kong",
+        information: `Enjoy the crossover between two stars of the gastronomy world, Chef Alvin Leung (a.k.a. Demon Chef) and Master Fu of the now-defunct Celebrity Cuisine was eagerly anticipated by all foodies. The two chefs put a new spin on the familiar Cantonese flavours, with collaborative efforts such as fried pork intestine stuffed with minced cuttlefish and black truffle. Chicken wing stuffed with bird's nest, one of Fu's specialities, can also be enjoyed here.`,
+		content: ""
+	},
+	{
+        id: 4,
+		description: "Lana Del Rey",
+		title: "Chinese Food",
+		src: "https://images.unsplash.com/photo-1651399436026-3ca4088b3d6e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2hpbmVzZSUyMGZvb2R8ZW58MHwwfDB8fHww",
+		ctaText: "Join",
+		ctaLink: "#",
+        time: "August 21, 2024",
+        people,
+        location: "The Demon Celebrity, Basement, South China Building, 1 Wyndham Street, Central, Hong Kong",
+        information: `Enjoy the crossover between two stars of the gastronomy world, Chef Alvin Leung (a.k.a. Demon Chef) and Master Fu of the now-defunct Celebrity Cuisine was eagerly anticipated by all foodies. The two chefs put a new spin on the familiar Cantonese flavours, with collaborative efforts such as fried pork intestine stuffed with minced cuttlefish and black truffle. Chicken wing stuffed with bird's nest, one of Fu's specialities, can also be enjoyed here.`,
+		content: ""
+	},
+	{
+        id: 5,
+		description: "Lana Del Rey",
+		title: "Chinese Food",
+		src: "https://images.unsplash.com/photo-1651399436026-3ca4088b3d6e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2hpbmVzZSUyMGZvb2R8ZW58MHwwfDB8fHww",
+		ctaText: "Join",
+		ctaLink: "#",
+        time: "August 21, 2024",
+        people,
+        location: "The Demon Celebrity, Basement, South China Building, 1 Wyndham Street, Central, Hong Kong",
+        information: `Enjoy the crossover between two stars of the gastronomy world, Chef Alvin Leung (a.k.a. Demon Chef) and Master Fu of the now-defunct Celebrity Cuisine was eagerly anticipated by all foodies. The two chefs put a new spin on the familiar Cantonese flavours, with collaborative efforts such as fried pork intestine stuffed with minced cuttlefish and black truffle. Chicken wing stuffed with bird's nest, one of Fu's specialities, can also be enjoyed here.`,
+		content: ""
+	},
+	{
+        id: 6,
+		description: "Lana Del Rey",
+		title: "Chinese Food",
+		src: "https://images.unsplash.com/photo-1651399436026-3ca4088b3d6e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2hpbmVzZSUyMGZvb2R8ZW58MHwwfDB8fHww",
+		ctaText: "Join",
+		ctaLink: "#",
+        time: "August 21, 2024",
+        people,
+        location: "The Demon Celebrity, Basement, South China Building, 1 Wyndham Street, Central, Hong Kong",
+        information: `Enjoy the crossover between two stars of the gastronomy world, Chef Alvin Leung (a.k.a. Demon Chef) and Master Fu of the now-defunct Celebrity Cuisine was eagerly anticipated by all foodies. The two chefs put a new spin on the familiar Cantonese flavours, with collaborative efforts such as fried pork intestine stuffed with minced cuttlefish and black truffle. Chicken wing stuffed with bird's nest, one of Fu's specialities, can also be enjoyed here.`,
+		content: ""
+	},
+	{
+        id: 7,
+		description: "Lana Del Rey",
+		title: "Chinese Food",
+		src: "https://images.unsplash.com/photo-1651399436026-3ca4088b3d6e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2hpbmVzZSUyMGZvb2R8ZW58MHwwfDB8fHww",
+		ctaText: "Join",
+		ctaLink: "#",
+        time: "August 21, 2024",
+        people,
+        location: "The Demon Celebrity, Basement, South China Building, 1 Wyndham Street, Central, Hong Kong",
+        information: `Enjoy the crossover between two stars of the gastronomy world, Chef Alvin Leung (a.k.a. Demon Chef) and Master Fu of the now-defunct Celebrity Cuisine was eagerly anticipated by all foodies. The two chefs put a new spin on the familiar Cantonese flavours, with collaborative efforts such as fried pork intestine stuffed with minced cuttlefish and black truffle. Chicken wing stuffed with bird's nest, one of Fu's specialities, can also be enjoyed here.`,
+		content: ""
+	},
+	{
+        id: 8,
+		description: "Lana Del Rey",
+		title: "Chinese Food",
+		src: "https://images.unsplash.com/photo-1651399436026-3ca4088b3d6e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2hpbmVzZSUyMGZvb2R8ZW58MHwwfDB8fHww",
+		ctaText: "Join",
+		ctaLink: "#",
+        time: "August 21, 2024",
+        people,
+        location: "The Demon Celebrity, Basement, South China Building, 1 Wyndham Street, Central, Hong Kong",
+        information: `Enjoy the crossover between two stars of the gastronomy world, Chef Alvin Leung (a.k.a. Demon Chef) and Master Fu of the now-defunct Celebrity Cuisine was eagerly anticipated by all foodies. The two chefs put a new spin on the familiar Cantonese flavours, with collaborative efforts such as fried pork intestine stuffed with minced cuttlefish and black truffle. Chicken wing stuffed with bird's nest, one of Fu's specialities, can also be enjoyed here.`,
+		content: ""
+	},
+	{
+        id: 9,
+		description: "Lana Del Rey",
+		title: "Chinese Food",
+		src: "https://images.unsplash.com/photo-1651399436026-3ca4088b3d6e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2hpbmVzZSUyMGZvb2R8ZW58MHwwfDB8fHww",
+		ctaText: "Join",
+		ctaLink: "#",
+        time: "August 21, 2024",
+        people,
+        location: "The Demon Celebrity, Basement, South China Building, 1 Wyndham Street, Central, Hong Kong",
+        information: `Enjoy the crossover between two stars of the gastronomy world, Chef Alvin Leung (a.k.a. Demon Chef) and Master Fu of the now-defunct Celebrity Cuisine was eagerly anticipated by all foodies. The two chefs put a new spin on the familiar Cantonese flavours, with collaborative efforts such as fried pork intestine stuffed with minced cuttlefish and black truffle. Chicken wing stuffed with bird's nest, one of Fu's specialities, can also be enjoyed here.`,
+		content: ""
+	}
+]
