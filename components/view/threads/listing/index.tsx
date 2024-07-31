@@ -174,14 +174,16 @@ export function ExpandableCardStandard() {
                       </div>
                     ))}
                     {setInterval.length > 0 && sent.map((val, idxMsg) => (
-                      <div className={`grid justify-end text-right`}>
-                        <div key={`msg=${idxMsg}`} className={`p-2 rounded-md bg-slate-300 w-fit`}>
-                          {val?.content}
+                      val.orderId === active.id && (
+                        <div className={`grid justify-end text-right`}>
+                          <div key={`msg=${idxMsg}`} className={`p-2 rounded-md bg-slate-300 w-fit`}>
+                            {val?.content}
+                          </div>
+                          <p className="font-light text-xs">
+                            From you
+                          </p>
                         </div>
-                        <p className="font-light text-xs">
-                          From you
-                        </p>
-                      </div>
+                      )
                     ))}
                   </div>
                   <div className={`flex gap-4`}>
