@@ -3,7 +3,6 @@
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { ExpandableCardStandard } from "../../orders/listing"
 import { useEffect, useState } from "react"
-import { formatOrderData } from "@/lib/utils"
 
 export const ThreadsActive = () => {
 	const [orders, setOrders] = useState([])

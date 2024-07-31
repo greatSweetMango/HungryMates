@@ -1,8 +1,8 @@
-import { ThreadsAll } from "@/components/view/threads/views/message/all"
-import { ThreadsActive } from "@/components/view/threads/views/message/active"
-import { ThreadsNew } from "@/components/view/threads/views/message/new"
-import { ThreadsUpcoming } from "@/components/view/threads/views/message/upcoming"
-import { ThreadsEnded } from "@/components/view/threads/views/message/ended"
+import { ThreadsAll } from "@/components/view/threads/views/all"
+import { ThreadsActive } from "@/components/view/threads/views/active"
+import { ThreadsNew } from "@/components/view/threads/views/new"
+import { ThreadsUpcoming } from "@/components/view/threads/views/upcoming"
+import { ThreadsEnded } from "@/components/view/threads/views/ended"
 
 const tabStyle = `w-full overflow-hidden relative h-full rounded-2xl text-xl font-bold bg-neutral-100 border border-neutral-800`
 

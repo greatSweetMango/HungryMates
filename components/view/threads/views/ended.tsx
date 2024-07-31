@@ -3,7 +3,6 @@
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { ExpandableCardStandard } from "../../orders/listing"
 import { useEffect, useState } from "react"
-import { formatOrderData } from "@/lib/utils"
 
 export const ThreadsEnded = () => {
 	const [orders, setOrders] = useState([])
@@ -32,7 +31,7 @@ export const ThreadsEnded = () => {
 
 	return (
 		<ScrollArea className={`h-full w-full mx-auto items-start justify-start`}>
-			<ExpandableCardStandard array={formatOrderData(orders).filter((item) => item?.status! === "pending")} />
+			<ExpandableCardStandard />
 		</ScrollArea>
 	)
 }

@@ -1,6 +1,6 @@
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Tabs } from "@/components/extra/animated-tabs"
-import { tabs } from "@/constant/threads-tabs"
+import { tabs } from "@/constant/order-tabs"
 
 export default function Orders() {
 

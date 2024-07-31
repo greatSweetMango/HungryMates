@@ -1,7 +1,7 @@
 "use client"
 
 import { ScrollArea } from "@/components/ui/scroll-area"
-import { ExpandableCardStandard } from "../../orders/listing"
+import { ExpandableCardStandard } from "../../listing"
 import { useEffect, useState } from "react"
 
 export const ThreadsAll = () => {

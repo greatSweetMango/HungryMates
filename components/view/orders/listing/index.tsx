@@ -7,7 +7,6 @@ import { useOutsideClick } from "@/hooks/use-outside-click";
 import { OrderInfo } from "./info";
 import { cards } from "@/constant/orders";
 import axiosClient from "@/lib/axiosClient";
-import { formatOrderData } from "@/lib/utils";
 
 export function ExpandableCardStandard() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
@@ -15,13 +14,47 @@ export function ExpandableCardStandard() {
   );
   const ref = useRef<HTMLDivElement>(null);
   const id = useId();
-  const [cardList, setCardList] = useState([]);
+  const [cardList, setCardList] = useState<any[]>([]);
 
+  const formatOrderData = (array: any[]) => {
+    let data: any[] = []
+    for (let i = 0; i < array?.length; i++) {
+      let users: any[] = []
+          for (let j = 0; j < array[i].participants?.length; j++) {
+              const tmp = {
+                  id: array[i].participants[j].id,
+                  name: `Name ${j}`,
+                  designation: "Software Engineer",
+                  image: "https://images.unsplash.com/photo-1599566150163-29194dcaad36?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=3387&q=80",
+              }
+              users = [...users, tmp]
+          }
+          const temp = {
+              id: array[i].id,
+              description: array[i].diningDescription,
+              title: array[i].orderGroupName,
+              src: "https://images.unsplash.com/photo-1651399436026-3ca4088b3d6e?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NHx8Y2hpbmVzZSUyMGZvb2R8ZW58MHwwfDB8fHww",
+              ctaText: array[i].status === "pending" ? "Join" : "Ended",
+              ctaLink: "#",
+              time: array[i].diningTime,
+              people: users,
+              location: array[i].diningLocation,
+              information: array[i].diningDescription,
+              status: array[i].status,
+              creatorId: array[i].orderGroupCreaterId,
+        chats: array[i].chats,
+              content: ""    
+          }
+          data = [...data, temp]
+      }
+      return data
+  }
+  
   useEffect(() => {
     async function fetchOrders() {
       try {
         const orders = await axiosClient.get("/orders");
-		setCardList(orders.data)
+		setCardList(formatOrderData(orders.data))
       } catch (error) {
         console.error("Failed to fetch orders:", error);
       }
@@ -153,7 +186,7 @@ export function ExpandableCardStandard() {
         ) : null}
       </AnimatePresence>
       <ul className="mx-auto w-full gap-4">
-        {formatOrderData(cardList).map((card, index) => (
+        {cardList.map((card, index) => (
           <motion.div
             layoutId={`card-${card.title}-${id}-${card.id}`}
             key={`card-${card.title}-${id}-${card.id}`}
