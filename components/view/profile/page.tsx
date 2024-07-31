@@ -1,16 +1,22 @@
+"use client"
+
 import { ScrollArea } from "@/components/ui/scroll-area"
 import { Tabs } from "@/components/extra/animated-tabs"
 import { tabs } from "@/constant/profile-tabs"
+import { useSession } from "next-auth/react"
+
 import ProfileUser from "./user"
 
 export default function Profile() {
+	const { data: session, status } = useSession()
+
 	return (
 		<ScrollArea className={`no-visible-scrollbar h-full w-full min-h-[50vh] items-start justify-start p-4`}>
 			<div className={`max-w-5xl mx-auto`}>
 				<div className="grid pt-10 gap-2 text-center justify-center">
 					<ProfileUser />
 					<h1 className="text-3xl font-bold underline">
-						Manu
+						{session?.user?.name}
 					</h1>
 					<h3 className="">
 						A programmer at heart

@@ -4,10 +4,13 @@ import Image from "next/image";
 import { useEffect, useId, useRef, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
 import { useOutsideClick } from "@/hooks/use-outside-click";
-import { OrderInfo } from "./info";
 import { cards } from "@/constant/orders";
 import axiosClient from "@/lib/axiosClient";
 import { formatOrderData } from "@/lib/utils";
+import { Separator } from "@/components/ui/separator";
+import { Input } from "@/components/ui/input";
+import { Send } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 export function ExpandableCardStandard() {
   const [active, setActive] = useState<(typeof cards)[number] | boolean | null>(
@@ -16,12 +19,21 @@ export function ExpandableCardStandard() {
   const ref = useRef<HTMLDivElement>(null);
   const id = useId();
   const [cardList, setCardList] = useState([]);
+  const [sent, setSent] = useState<any[]>([]);
+  const [msg, setMsg] = useState("");
+
+  const sendMsg = (message: string, idOrder: string, old: any[]) => {
+    const newVal: any[] = [...old, { content: message, orderId: idOrder }]
+    setSent(newVal)
+    setMsg("") 
+  }
 
   useEffect(() => {
     async function fetchOrders() {
       try {
         const orders = await axiosClient.get("/orders");
-		setCardList(orders.data)
+        console.log(orders.data)
+        setCardList(orders.data)
       } catch (error) {
         console.error("Failed to fetch orders:", error);
       }
@@ -90,7 +102,7 @@ export function ExpandableCardStandard() {
               ref={ref}
               className="no-visible-scrollbar w-full max-w-[500px] h-full md:h-fit md:max-h-[90%]  flex flex-col bg-white dark:bg-neutral-900 sm:rounded-3xl overflow-y-scroll"
             >
-              <motion.div layoutId={`image-${active.title}-${id}-${active.id}`}>
+              {/* <motion.div layoutId={`image-${active.title}-${id}-${active.id}`}>
                 <Image
                   priority
                   width={200}
@@ -99,11 +111,11 @@ export function ExpandableCardStandard() {
                   alt={active.title}
                   className="w-full h-80 lg:h-80 sm:rounded-tr-lg sm:rounded-tl-lg object-cover object-top"
                 />
-              </motion.div>
+              </motion.div> */}
 
               <div>
-                <div className="flex justify-between items-start p-4">
-                  <div className="">
+                <div className="grid gap-2 w-full items-start p-4">
+                  <div className="w-full">
                     <motion.h3
                       layoutId={`title-${active.title}-${id}-${active.id}`}
                       className="font-bold text-neutral-700 dark:text-neutral-200"
@@ -117,7 +129,36 @@ export function ExpandableCardStandard() {
                       {active.description}
                     </motion.p>
                   </div>
-
+                  <Separator className={`border w-full`} />
+                  <div className={`grid gap-2`}>
+                    {active.chats.map((itm, indexMsg) => (
+                      <div>
+                        <div key={`msg=${indexMsg}`} className={`p-2 rounded-md bg-slate-300 w-fit`}>
+                          {itm?.content}
+                        </div>
+                        <p className="font-light text-xs">
+                          From {itm?.userId}
+                        </p>
+                      </div>
+                    ))}
+                    {setInterval.length > 0 && sent.map((val, idxMsg) => (
+                      <div className={`grid justify-end text-right`}>
+                        <div key={`msg=${idxMsg}`} className={`p-2 rounded-md bg-slate-300 w-fit`}>
+                          {val?.content}
+                        </div>
+                        <p className="font-light text-xs">
+                          From you
+                        </p>
+                      </div>
+                    ))}
+                  </div>
+                  <div className={`flex gap-4`}>
+                    <Input type="text" value={msg} onChange={(e) => setMsg(e.target.value)} />
+                    <Button className={``} onClick={() => sendMsg(msg, active.id, sent)}>
+                        Send <Send className={`w-6 h-6`} />
+                    </Button>
+                  </div>
+{/* 
                   <motion.div
                     layoutId={`button-${active.title}-${id}-${active.id}`}
                     // href={active.ctaLink}
@@ -125,7 +166,7 @@ export function ExpandableCardStandard() {
                     className="cursor-pointer px-4 py-3 text-sm rounded-full font-bold bg-green-500 text-white"
                   >
                     {active.ctaText}
-                  </motion.div>
+                  </motion.div> */}
                 </div>
                 <div className="pt-4 relative px-4">
                   <motion.div
@@ -139,12 +180,12 @@ export function ExpandableCardStandard() {
 										[scrollbar-width:none] [-ms-overflow-style:none] [-webkit-overflow-scrolling:touch]"
                     // [mask:linear-gradient(to_bottom,white,white,transparent)]
                   >
-                    <OrderInfo
+                    {/* <OrderInfo
                       time={active.time}
                       people={active.people}
                       location={active.location}
                       description={active.information}
-                    />
+                    /> */}
                   </motion.div>
                 </div>
               </div>
@@ -185,12 +226,6 @@ export function ExpandableCardStandard() {
                 </motion.p>
               </div>
             </div>
-            <motion.button
-              layoutId={`button-${card.title}-${id}-${card.id}`}
-              className="px-4 py-2 text-sm rounded-full font-bold bg-gray-100 hover:bg-green-500 hover:text-white text-black mt-4 md:mt-0"
-            >
-              {card.ctaText}
-            </motion.button>
           </motion.div>
         ))}
       </ul>

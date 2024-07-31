@@ -5,6 +5,8 @@ import Link, { LinkProps } from "next/link"
 import { useState, createContext, useContext, ReactNode, Dispatch, SetStateAction, ComponentProps } from "react"
 import { AnimatePresence, motion } from "framer-motion"
 import { Menu, X } from "lucide-react"
+import { signOut } from "next-auth/react"
+import { useRouter } from "next/navigation"
 
 interface Links {
 	label: string
@@ -67,7 +69,7 @@ export const Sidebar = ({
 	open?: boolean
 	setOpen?: Dispatch<SetStateAction<boolean>>
 	animate?: boolean
-	logo?: any
+	logo: any
 }) => {
 	return (
 		<SidebarProvider open={open} setOpen={setOpen} animate={animate} logo={logo}>
@@ -117,6 +119,7 @@ export const MobileSidebar = ({
 	...props
 }: ComponentProps<"div">) => {
 	const { open, setOpen, logo } = useSidebar()
+
 	return (
 		<>
 			<div
@@ -175,15 +178,23 @@ export const SidebarLink = ({
 	className?: string
 	props?: LinkProps
 }) => {
-  	const { open, animate } = useSidebar()
+	const router = useRouter()
+  	
+	const { open, animate } = useSidebar()
+
+	const logout = () => {
+		signOut()
+	  	router.push("/")
+	}
+	  
 	return (
-		<Link
-			href={link.href}
+		<div
 			className={cn(
-				"flex items-center justify-start gap-2  group/sidebar py-2",
+				"flex items-center justify-start gap-2  group/sidebar py-2 cursor-pointer",
 				className
 			)}
 			{...props}
+			onClick={link.label === "Logout" ? () => logout() : () => router.push(link.href)}
 		>
 			{link.icon}
 
@@ -196,6 +207,6 @@ export const SidebarLink = ({
 			>
 				{link.label}
 			</motion.span>
-		</Link>
+		</div>
 	)
 }

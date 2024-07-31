@@ -1,11 +1,9 @@
-// import { headers } from "next/headers"
 import type { Metadata } from "next"
 import { ReactNode } from "react"
 import { Toaster as Sonner } from "../components/ui/sonner"
 import { Toaster } from "../components/ui/toaster"
 
-// const headersList = headers()
-// const referer = headersList.get("referer")
+import Layout from "@/components/layout"
 
 import "./globals.css"
 
@@ -112,9 +110,9 @@ export default function RootLayout({
 	return (
 		<html lang="en">
 			<body>
-				<main>
+				<Layout>
 					{children}
-				</main>
+				</Layout>
 				<Sonner />
 				<Toaster />
 			</body>
